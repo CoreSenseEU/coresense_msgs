@@ -1,5 +1,4 @@
 string session_id
-string tptp
 string formula_set_id
 ---
 bool success

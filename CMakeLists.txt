@@ -19,6 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ObjectUpdate.msg"
   "srv/StartSession.srv"
   "srv/AddToSession.srv"
+  "srv/RemoveFromSession.srv"
   "srv/ListSession.srv"
   "srv/GetSolution.srv"
   "srv/VampireExternalPredicate.srv"

@@ -4,5 +4,6 @@ string configuration
 ---
 string result
 uint8 code
+string code_msg
 ---
 string status

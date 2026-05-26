@@ -11,13 +11,18 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(rcl_interfaces REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ObjectUpdate.msg"
+  "msg/Property.msg"
+  "msg/ModelDescription.msg"
+  "msg/Models.msg"
   "srv/StartSession.srv"
+  "srv/EndSession.srv"
   "srv/AddToSession.srv"
   "srv/RemoveFromSession.srv"
   "srv/ListSession.srv"
@@ -32,7 +37,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/TestUnderstanding.srv"
   "action/QueryReasoner.action"
   "action/Understand.action"
-  DEPENDENCIES action_msgs std_msgs geometry_msgs)
+  DEPENDENCIES action_msgs std_msgs geometry_msgs rcl_interfaces)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -1,8 +1,10 @@
-string id
-string creation_date
-string location
-string extent
-string[] concepts
-string[] representation_classes
-coresense_msgs/Property[] properties
+string modelet_id
+builtin_interfaces/Time modelet_creation_date
+string[] modelet_representation_classes
+coresense_msgs/Property[] modelet_properties
+geometry_msgs/Point referent_location
+string referent_space
+builtin_interfaces/Time referent_time
+builtin_interfaces/Duration referent_duration
+string[] referent_concepts
 

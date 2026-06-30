@@ -35,6 +35,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/PopKnowledge.srv"
   "srv/Understanding.srv"
   "srv/TestUnderstanding.srv"
+  "srv/RegisterBehaviorTree.srv"
   "action/QueryReasoner.action"
   "action/Understand.action"
   DEPENDENCIES action_msgs std_msgs geometry_msgs rcl_interfaces)

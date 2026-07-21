@@ -15,14 +15,16 @@ find_package(rcl_interfaces REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ObjectUpdate.msg"
   "msg/Property.msg"
   "msg/ModelDescription.msg"
   "msg/Models.msg"
-  "srv/StartSession.srv"
+  "srv/GetRangeModelet.srv"
   "srv/EndSession.srv"
+  "srv/StartSession.srv"
   "srv/AddToSession.srv"
   "srv/RemoveFromSession.srv"
   "srv/ListSession.srv"
@@ -38,7 +40,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/RegisterBehaviorTree.srv"
   "action/QueryReasoner.action"
   "action/Understand.action"
-  DEPENDENCIES action_msgs std_msgs geometry_msgs rcl_interfaces)
+  DEPENDENCIES action_msgs std_msgs sensor_msgs geometry_msgs rcl_interfaces)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -1,6 +1,7 @@
 string session_id
 string target_modelet
 ---
-string result
+UnderstandingSolution[] solutions
+string error
 ---
 string status

@@ -19,7 +19,9 @@ find_package(sensor_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ObjectUpdate.msg"
+  "msg/FormulaSet.msg"
   "msg/Property.msg"
+  "msg/UnderstandingSolution.msg"
   "msg/ModelDescription.msg"
   "msg/Models.msg"
   "srv/GetRangeModelet.srv"
